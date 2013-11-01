@@ -28,16 +28,16 @@ namespace Knockout.Bootstrap.TemplateStore.Owin
             
             var template = templateStore.Get(root);
 
-            //if (ClientCached(context.Request, template.LastModified))
-            //{
-            //    response.StatusCode = 304;
-            //    response.Headers["Content-Length"] = "0";
+            if (ClientCached(context.Request, template.LastModified))
+            {
+                response.StatusCode = 304;
+                response.Headers["Content-Length"] = "0";
 
-            //    var tcs = new TaskCompletionSource<object>();
-            //    tcs.SetResult(null);
-            //    return tcs.Task;
-            //}
-            //response.Headers["Last-Modified"] = template.LastModified.ToUniversalTime().ToString("r");
+                var tcs = new TaskCompletionSource<object>();
+                tcs.SetResult(null);
+                return tcs.Task;
+            }
+            response.Headers["Last-Modified"] = template.LastModified.ToUniversalTime().ToString("r");
 
             return context.Response.WriteAsync(template.Output);
         }
@@ -51,7 +51,7 @@ namespace Knockout.Bootstrap.TemplateStore.Owin
                 DateTime isModifiedSince;
                 if (DateTime.TryParse(header, out isModifiedSince))
                 {
-                    return isModifiedSince >= contentModified;
+                    return isModifiedSince >= contentModified.AddSeconds(-1);
                 }
             }
 

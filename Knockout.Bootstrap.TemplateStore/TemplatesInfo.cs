@@ -13,7 +13,7 @@ namespace Knockout.Bootstrap.TemplateStore
 
         public TemplatesInfo(IEnumerable<FileInfo> files)
         {
-            LastModified = files.Max(f => f.LastWriteTimeUtc);
+            LastModified = files.Max(f => f.LastWriteTime);
             Templates = files
                 .ToDictionary(f => Path.GetFileNameWithoutExtension(f.Name), f => File.ReadAllText(f.FullName));
 
