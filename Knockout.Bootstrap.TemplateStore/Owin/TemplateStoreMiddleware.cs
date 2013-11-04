@@ -38,6 +38,7 @@ namespace Knockout.Bootstrap.TemplateStore.Owin
                 return tcs.Task;
             }
             response.Headers["Last-Modified"] = template.LastModified.ToUniversalTime().ToString("r");
+            response.Headers["Cache-Control"] = "no-cache";
 
             return context.Response.WriteAsync(template.Output);
         }
