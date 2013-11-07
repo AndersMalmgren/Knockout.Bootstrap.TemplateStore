@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Newtonsoft.Json;
 
 namespace Knockout.Bootstrap.TemplateStore
 {
@@ -17,7 +18,7 @@ namespace Knockout.Bootstrap.TemplateStore
             Templates = files
                 .ToDictionary(f => Path.GetFileNameWithoutExtension(f.Name), f => File.ReadAllText(f.FullName));
 
-            Output = Newtonsoft.Json.JsonConvert.SerializeObject(Templates);
+            Output = JsonConvert.SerializeObject(Templates);
         }
     }
 }
