@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Knockout.Bootstrap.TemplateStore</id>
+    <version>0.0</version>
+    <authors>Anders Malmgren</authors>
+    <owners>Anders Malmgren</owners>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/AndersMalmgren/Knockout.Bootstrap.TemplateStore</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Convention based template store for Knockout</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>Knockout MVVM Convention templates Owin</tags>
+    <dependencies>
+      <dependency id="Microsoft.Owin" version="2.0.1" /> 
+      <dependency id="Newtonsoft.Json" version="2.0.1" />    
+    </dependencies>
+  </metadata>
+</package>

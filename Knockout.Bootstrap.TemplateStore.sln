@@ -5,6 +5,30 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knockout.Bootstrap.Template
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knockout.Bootstrap.TemplateStore.SystemWeb", "Knockout.Bootstrap.TemplateStore.SystemWeb\Knockout.Bootstrap.TemplateStore.SystemWeb.csproj", "{F251B365-7A7F-4C06-906A-D9165C67BC8A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{34B952B3-E4EB-422F-8789-DB6224AD90EA}"
+	ProjectSection(SolutionItems) = preProject
+		.build\build_template_store.proj = .build\build_template_store.proj
+		.build\build_template_store_client.proj = .build\build_template_store_client.proj
+		.build\build_template_store_system_web.proj = .build\build_template_store_system_web.proj
+		.build\create_nuget_package.cmd = .build\create_nuget_package.cmd
+		.build\EcmaScript.NET.modified.dll = .build\EcmaScript.NET.modified.dll
+		.build\GitVersionInfo.dll = .build\GitVersionInfo.dll
+		.build\ICSharpCode.SharpZipLib.dll = .build\ICSharpCode.SharpZipLib.dll
+		.build\Mono.Security.dll = .build\Mono.Security.dll
+		.build\NGit.dll = .build\NGit.dll
+		.build\NSch.dll = .build\NSch.dll
+		.build\Package.TemplateStore.Client.nuspec = .build\Package.TemplateStore.Client.nuspec
+		.build\Package.TemplateStore.nuspec = .build\Package.TemplateStore.nuspec
+		.build\Package.TemplateStore.SystemWeb.nuspec = .build\Package.TemplateStore.SystemWeb.nuspec
+		.build\readme.txt = .build\readme.txt
+		.build\Sharpen.dll = .build\Sharpen.dll
+		.build\versions.xml = .build\versions.xml
+		.build\Yahoo.Yui.Compressor.dll = .build\Yahoo.Yui.Compressor.dll
+		.build\Yahoo.Yui.Compressor.MsBuildTask.dll = .build\Yahoo.Yui.Compressor.MsBuildTask.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knockout.Bootstrap.TemplateStore.Client", "Knockout.Bootstrap.TemplateStore.Client\Knockout.Bootstrap.TemplateStore.Client.csproj", "{5C11BACB-AA98-43E5-92BB-AE46EE8B4400}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +43,10 @@ Global
 		{F251B365-7A7F-4C06-906A-D9165C67BC8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F251B365-7A7F-4C06-906A-D9165C67BC8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F251B365-7A7F-4C06-906A-D9165C67BC8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C11BACB-AA98-43E5-92BB-AE46EE8B4400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C11BACB-AA98-43E5-92BB-AE46EE8B4400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C11BACB-AA98-43E5-92BB-AE46EE8B4400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C11BACB-AA98-43E5-92BB-AE46EE8B4400}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,1 @@
+Please see https://github.com/AndersMalmgren/Knockout.Bootstrap.TemplateStore/wiki for more information on using this lib.
