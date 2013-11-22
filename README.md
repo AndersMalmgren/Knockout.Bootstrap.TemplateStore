@@ -1,7 +1,7 @@
 Knockout.Bootstrap.TemplateStore
 ================================
 
-Owin template store for Knockout.Bootstrap
+Convention based Owin template store
 
 Install for ASP.NET using nuget
 ```
