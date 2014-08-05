@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Threading.Tasks;
 using Microsoft.Owin;
 
@@ -16,7 +17,12 @@ namespace Knockout.Bootstrap.TemplateStore.Owin
 
         internal static void Init(string templatePath, string fileMask)
         {
-            templateStore = new TemplateStore(templatePath, fileMask);
+            Init(templatePath, fileMask, false);   
+        }
+
+        internal static void Init(string templatePath, string fileMask, bool deep)
+        {
+            templateStore = new TemplateStore(templatePath, fileMask, deep);
         }
         
         public override Task Invoke(IOwinContext context)
